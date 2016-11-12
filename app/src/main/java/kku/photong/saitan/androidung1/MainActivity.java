@@ -20,8 +20,8 @@ public class MainActivity extends AppCompatActivity {
         //Bind widget
         //R. จะ error เมื่อมีอักษรตัวใหญ่ใน XML
         //Sign In
-        signInButton = (Button) findViewById(R.id.button);
-        signUpButton = (Button) findViewById(R.id.button2);
+        signInButton = (Button) findViewById(R.id.button2);
+        signUpButton = (Button) findViewById(R.id.button);
 
         //Sign Up
         signUpButton.setOnClickListener(new View.OnClickListener() {

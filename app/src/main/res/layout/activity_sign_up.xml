@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_sign_up"
     android:layout_width="match_parent"
@@ -8,6 +9,89 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="kku.photong.saitan.androidung1.SignUpActivity">
+    tools:context="kku.photong.saitan.androidung1.SignUpActivity"
+    android:background="@drawable/bg23">
+
+    <TextView
+        android:text="@string/sign__up"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textSize="@dimen/h1"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/holo_blue_bright"
+        android:textColorHint="@android:color/background_dark" />
+
+    <Button
+        android:text="@string/sign__up"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button4"
+        android:layout_alignParentBottom="true" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textView"
+        android:layout_above="@+id/button4"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="#a0ffffff">
+
+        <ImageView
+            android:layout_width="@dimen/icon"
+            android:layout_height="@dimen/icon"
+            app:srcCompat="@drawable/master_android"
+            android:id="@+id/imageView"
+            android:layout_weight="0.44" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="215dp"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText4"
+                android:hint="user"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textColorHint="@color/colorAccent" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName|number"
+                android:ems="10"
+                android:id="@+id/editText3"
+                android:hint="Phone:"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textColorHint="@color/colorAccent" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText2"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textColorHint="@color/colorAccent"
+                android:hint="User:" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/editText"
+                android:hint="Password:"
+                android:textColor="@android:color/holo_blue_bright"
+                android:textColorHint="@color/colorAccent" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 </RelativeLayout>
