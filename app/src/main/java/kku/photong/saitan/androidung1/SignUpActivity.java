@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import kku.photong.saitan.androidung1.R;
+
 public class SignUpActivity extends AppCompatActivity {
     // Explicit
     private EditText nameEditText,phonEditText,userEditText, passwordEditText;
@@ -42,6 +44,9 @@ public class SignUpActivity extends AppCompatActivity {
                 if (nameString.equals("") || phonString.equals("") || userString.equals("")||passString.equals("")){
                     //have Space
                     Log.d("12novV1","Have Space"); // debugging
+                    MyAlert myAlert = new MyAlert(SignUpActivity.this, R.drawable.doremon48, "มีช่องว่าง", "กรุณากรอกให้ครบทุกช่อง");
+                    myAlert.myDialog();
+
                 }
             }
         });
