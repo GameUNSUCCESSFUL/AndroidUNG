@@ -1,5 +1,6 @@
 package kku.photong.saitan.androidung1;
 
+import android.content.Intent;
 import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -51,7 +52,31 @@ public class SignUpActivity extends AppCompatActivity {
             }
         });
 
+        // Image Controller
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+                intent.setType("image/*");//เอาโปรแกรมทีี่สามารถเปิดภาพได้
+                startActivityForResult(Intent.createChooser(intent,"โปรดเลือกแอพดูภาพ"),0);
+            }
+        });
+
     }//Main Method
 
+    @Override
+    protected void onActivityResult(int requestCode,// รับ 0 ที่ส่งมา
+                                    int resultCode, //
+                                    Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (( requestCode == 0)&&(resultCode==RESULT_OK)) {
+
+            Log.d("12novV1","Result OK");
+
+        }//if
+
+    }
 
 }// Main Class
